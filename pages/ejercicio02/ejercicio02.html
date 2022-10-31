@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico 05 - Ejercicio 02</title>
+    <link rel="stylesheet" href="../../css/estilo.css">
+    <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="#"><img class="logo" src="../../img/logo.png" alt="Logo pagina web"></a>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../ejercicio01/ejercicio01.html">Ejercicio 01</a></li>
+                <li><a href="../ejercicio02/ejercicio02.html">Ejercicio 02</a></li>
+                <li><a href="../ejercicio03/ejercicio03.html">Ejercicio 03</a></li>
+            </ul>
+        </nav>
+        <div class="text">
+            <h2>Ejercicio 02</h2>
+            <h1>TRABAJO PRACTICO</h1>
+            <div>
+                <a href="#" class="button" onclick="ActivarConsola()">Iniciar Script en Consola</a>
+            </div><br><br>
+            <div>
+                <a href="#" class="button" onclick="ActivarPagina()">Iniciar Script en la Pagina</a>
+            </div><br><br>
+            <div class="script">
+                <script>
+                function ActivarPagina() {
+                    gatos = prompt("Ingrese la cantidad de gatos a mostrar");
+                    pasos = prompt("Ingrese la cantidad de pasos a mostrar");
+
+                    cantidadDeGatos = parseInt(gatos);
+                    cantidadDePasos = parseInt(pasos);
+
+                    pasostotal = "";
+
+                    document.write('<h1><a href="../ejercicio02/ejercicio02.html">Volver a la Pagina</a></h1>');
+
+                    document.write("<h2>*** Datos Ingresados ***</h2>");
+                    document.write("<h2> </h2>");
+                    document.write("<h2>Gatos Total: " + cantidadDeGatos + "</h2>");
+                    document.write("<h2>Pasos Total: " + cantidadDePasos + "</h2>");
+                    document.write("<h2> </h2>");
+
+                    for ( p = 1 ; p <= cantidadDePasos ; p++ ){
+
+                    pasostotal = pasostotal + "🐾";
+                                        
+                    }
+                    
+                    for ( g = 1 ; g <= cantidadDeGatos ; g++ ) {
+                    
+                    document.write("<h3>Gato #" + g + ": 🐈" + pasostotal + " </h3>");
+                    
+                    }
+                }
+                </script>
+            </div>
+        </div>
+        <div class="credit">
+            <a href="#"><h2 class="credit-text"><i class="fa-solid fa-user"></i> Developed by Edgar Montoya</h2></a>
+        </div>
+    </header>
+</body>
+</html>

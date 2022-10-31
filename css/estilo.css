@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 54px;
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+.menu-button {
+    font-size: 1.5em;
+    color: #fff;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 90px;
+    background: rgba(0, 0, 0, 0.95);
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all 0.5s;
+}
+
+.nav-menu li a {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-menu li, .nav-menu li a:hover, .menu-button:hover {
+    color: rgb(99, 99, 248);
+    transition: 0.3s;
+}
+
+.credit-text:hover {
+    color: rgb(150, 150, 248);
+    transition: 0.3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+.text {
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 130px;
+    text-align: center;
+    color: #fff;
+}
+
+.text h1 {
+    font-size: 3.5em;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.text h2 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.button {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 40px;
+    padding: 10px;
+    background-color: rgb(8, 8, 248);
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    border: 1px solid #fff;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: rgb(8, 8, 248);
+    border: 1px solid rgb(8, 8, 248);
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.credit-text {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.script {
+    font-weight: 400;
+}
+
+@media (max-width:400px){
+    .logo{
+        font-size: 32px;
+        margin-left: 30px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .text h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .text h2 {
+        font-size: 16px;
+    }
+
+    .credit-text {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .button {
+        font-size: 0.5em;
+        font-weight: 600;
+        background-color: rgb(8, 8, 248);
+        color: #fff;
+        border-radius: 5px;
+        transition: 0.5s;
+        border: 1px solid #fff;
+    }
+    
+    .button:hover {
+        background-color: #fff;
+        color: rgb(8, 8, 248);
+        border: 1px solid rgb(8, 8, 248);
+        border-radius: 5px;
+        font-size: 0.5em;
+        font-weight: 600;
+    }
+}
+
+@media (min-width:768px){
+    .logo{
+        margin-left: 50px;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        font-size: 1em;
+    }
+
+    .text h1 {
+        font-size: 5em;
+        margin-bottom: 30px;
+    }
+
+    .text h2 {
+        font-size: 2.5em;
+    }
+
+    .credit-text {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 1.8em;
+        font-weight: 600;
+    }
+
+    .button {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin: 40px;
+        padding: 10px;
+        background-color: rgb(8, 8, 248);
+        color: #fff;
+        border-radius: 5px;
+        transition: 0.5s;
+        border: 1px solid #fff;
+    }
+    
+    .button:hover {
+        background-color: #fff;
+        color: rgb(8, 8, 248);
+        border: 1px solid rgb(8, 8, 248);
+        font-size: 1.75em;
+        font-weight: 600;
+        padding: 10px 20px;
+    }
+}
